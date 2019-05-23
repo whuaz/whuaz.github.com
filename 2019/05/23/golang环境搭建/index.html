@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | whuaz</title>
+  <title>golang环境搭建 | whuaz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="whuaz">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="golang最为重要的环境变量 $GOROOT Go 在你的电脑上的安装位置，它的值一般都是 $HOME/go $GOARCH 目标机器的处理器架构，它的值可以是 386、amd64 或 arm $GOOS 目标机器的操作系统，它的值可以是 darwin、freebsd、linux 或 windows。 $GOBIN 编译器和链接器的安装位置，默认是 $GOROOT/bin，如果你使用的是 Go">
+<meta property="og:type" content="article">
+<meta property="og:title" content="golang环境搭建">
+<meta property="og:url" content="http://yoursite.com/2019/05/23/golang环境搭建/index.html">
 <meta property="og:site_name" content="whuaz">
+<meta property="og:description" content="golang最为重要的环境变量 $GOROOT Go 在你的电脑上的安装位置，它的值一般都是 $HOME/go $GOARCH 目标机器的处理器架构，它的值可以是 386、amd64 或 arm $GOOS 目标机器的操作系统，它的值可以是 darwin、freebsd、linux 或 windows。 $GOBIN 编译器和链接器的安装位置，默认是 $GOROOT/bin，如果你使用的是 Go">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-23T02:46:12.694Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="whuaz">
+<meta name="twitter:title" content="golang环境搭建">
+<meta name="twitter:description" content="golang最为重要的环境变量 $GOROOT Go 在你的电脑上的安装位置，它的值一般都是 $HOME/go $GOARCH 目标机器的处理器架构，它的值可以是 386、amd64 或 arm $GOOS 目标机器的操作系统，它的值可以是 darwin、freebsd、linux 或 windows。 $GOBIN 编译器和链接器的安装位置，默认是 $GOROOT/bin，如果你使用的是 Go">
   
     <link rel="alternative" href="/atom.xml" title="whuaz" type="application/atom+xml">
   
@@ -150,76 +154,183 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-golang环境搭建" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      golang环境搭建
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/23/golang环境搭建/" class="archive-article-date">
+
+        
+        <a href="/2019/05/23/golang环境搭建/" class="archive-article-date">
   	<time datetime="2019-05-23T02:33:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/23/golang环境搭建/">golang环境搭建</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="golang最为重要的环境变量"><a href="#golang最为重要的环境变量" class="headerlink" title="golang最为重要的环境变量"></a>golang最为重要的环境变量</h5><ul>
+<li><strong>$GOROOT</strong> Go 在你的电脑上的安装位置，它的值一般都是 <code>$HOME/go</code></li>
+<li><strong>$GOARCH</strong> 目标机器的处理器架构，它的值可以是 386、amd64 或 arm</li>
+<li><strong>$GOOS</strong> 目标机器的操作系统，它的值可以是 darwin、freebsd、linux 或 windows。</li>
+<li><strong>$GOBIN</strong> 编译器和链接器的安装位置，默认是 <code>$GOROOT/bin</code>，如果你使用的是 Go 1.0.3 及以后的版本，一般情况下你可以将它的值设置为空，Go 将会使用前面提到的默认值。</li>
+<li><strong>$GOPATH</strong> 默认采用和 <code>$GOROOT</code> 一样的值，但从 Go 1.1 版本开始，你必须修改为其它路径。它可以包含多个 Go 语言源码文件、包文件和可执行文件的路径，而这些路径下又必须分别包含三个规定的目录：<code>src</code>、<code>pkg</code> 和 <code>bin</code>，这三个目录分别用于存放源码文件、包文件和可执行文件。</li>
+<li><strong>$GOARM</strong> 专门针对基于 arm 架构的处理器，它的值可以是 5 或 6，默认为 6。</li>
+<li><strong>$GOMAXPROCS</strong> 用于设置应用程序可使用的处理器个数与核数</li>
+</ul>
+<h5 id="Linux系统安装go"><a href="#Linux系统安装go" class="headerlink" title="Linux系统安装go"></a>Linux系统安装go</h5><ul>
+<li><p>解压go安装包至指定目录</p>
+</li>
+<li><p>配置环境变量：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line"><span class="meta">#</span> 最后添加如下</span><br><span class="line"><span class="meta">#</span> go安装目录</span><br><span class="line">export GOROOT=$HOME/go</span><br><span class="line"><span class="meta">#</span> 确保相关文件在文件系统的任何地方都能被调用</span><br><span class="line">export PATH=$PATH:$GOROOT/bin</span><br><span class="line"><span class="meta">#</span> 工作目录</span><br><span class="line">export GOPATH=$HOME/Applications/Go</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 环境变量生效</span><br><span class="line">source ~/.bashrc</span><br><span class="line"><span class="meta">#</span> 检查环境变量</span><br><span class="line">go version</span><br><span class="line">go env</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取go源码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> &lt;VERSION&gt;为当前go的版本号</span><br><span class="line">wget https://storage.googleapis.com/golang/go&lt;VERSION&gt;.src.tar.gz</span><br><span class="line">tar -zxvf go&lt;VERSION&gt;.src.tar.gz</span><br><span class="line">sudo mv go $GOROOT</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构建</p>
+<p>在终端使用以下指令来进行编译工作。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd $GOROOT/src</span><br><span class="line">./all.bash</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>#####　测试安装</p>
+<p>编辑器编辑hello.go</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="built_in">println</span>(<span class="string">"Hello"</span>, <span class="string">"world"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> run hello.<span class="keyword">go</span></span><br></pre></td></tr></table></figure>
+<h5 id="版本更新"><a href="#版本更新" class="headerlink" title="版本更新"></a>版本更新</h5>
+      
 
-        <div class="article-info info-on-right">
-          
-          
-
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/23/golang环境搭建/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/23/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-23T01:15:55.226Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/23/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -242,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
