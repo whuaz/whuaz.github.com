@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>【golang基础】method代码示例 | whuaz</title>
+  <title>Archives: 2019/6 | whuaz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="函数的另一种形态，带有接受者的函数method12A method is a function with an implicit first argument, called a receiver.方法是具有隐式第一个参数的函数，称为接收器。 代码示例： 123456789101112131415161718192021222324252627package mainimport (	&quot;fmt&quot;">
-<meta name="keywords" content="golang基础">
-<meta property="og:type" content="article">
-<meta property="og:title" content="【golang基础】method代码示例">
-<meta property="og:url" content="http://yoursite.com/2019/05/23/golang基础-method代码示例/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="whuaz">
+<meta property="og:url" content="http://yoursite.com/archives/2019/06/index.html">
 <meta property="og:site_name" content="whuaz">
-<meta property="og:description" content="函数的另一种形态，带有接受者的函数method12A method is a function with an implicit first argument, called a receiver.方法是具有隐式第一个参数的函数，称为接收器。 代码示例： 123456789101112131415161718192021222324252627package mainimport (	&quot;fmt&quot;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-23T06:30:38.276Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【golang基础】method代码示例">
-<meta name="twitter:description" content="函数的另一种形态，带有接受者的函数method12A method is a function with an implicit first argument, called a receiver.方法是具有隐式第一个参数的函数，称为接收器。 代码示例： 123456789101112131415161718192021222324252627package mainimport (	&quot;fmt&quot;">
+<meta name="twitter:title" content="whuaz">
   
     <link rel="alternative" href="/atom.xml" title="whuaz" type="application/atom+xml">
   
@@ -155,190 +150,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-golang基础-method代码示例" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      【golang基础】method代码示例
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/06/17/openldap安装/" class="archive-article-date">
+  	<time datetime="2019-06-17T07:28:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-17</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/06/17/openldap安装/">OpenLdap安装（ubantu_18）</a>
     </h1>
   
 
-        
-        <a href="/2019/05/23/golang基础-method代码示例/" class="archive-article-date">
-  	<time datetime="2019-05-23T06:11:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="函数的另一种形态，带有接受者的函数method"><a href="#函数的另一种形态，带有接受者的函数method" class="headerlink" title="函数的另一种形态，带有接受者的函数method"></a>函数的另一种形态，带有接受者的函数<code>method</code></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A method is a function with an implicit first argument, called a receiver.</span><br><span class="line">方法是具有隐式第一个参数的函数，称为接收器。</span><br></pre></td></tr></table></figure>
-<p>代码示例：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"math"</span></span><br><span class="line">)</span><br><span class="line"><span class="keyword">type</span> Rectangle <span class="keyword">struct</span> &#123;</span><br><span class="line">	width, height <span class="keyword">float64</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">type</span> Circle <span class="keyword">struct</span> &#123;</span><br><span class="line">	radius <span class="keyword">float64</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r Rectangle)</span> <span class="title">area</span><span class="params">()</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> r.width*r.height</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c Circle)</span> <span class="title">area</span><span class="params">()</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">	<span class="keyword">return</span> c.radius * c.radius * math.Pi</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    r1 := Rectangle&#123;<span class="number">12</span>, <span class="number">2</span>&#125;</span><br><span class="line">    r2 := Rectangle&#123;<span class="number">9</span>, <span class="number">4</span>&#125;</span><br><span class="line">    c1 := Circle&#123;<span class="number">10</span>&#125;</span><br><span class="line">    c2 := Circle&#123;<span class="number">25</span>&#125;</span><br><span class="line">    fmt.Println(<span class="string">"Area of r1 is: "</span>, r1.area())</span><br><span class="line">    fmt.Println(<span class="string">"Area of r2 is: "</span>, r2.area())</span><br><span class="line">    fmt.Println(<span class="string">"Area of c1 is: "</span>, c1.area())</span><br><span class="line">    fmt.Println(<span class="string">"Area of c2 is: "</span>, c2.area())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>使用method注意事项：</strong></p>
-<ul>
-<li>虽然method的名字一模一样,但是如果接收者不一样,那么method就不一样</li>
-<li>method里面可以访问接收者的字段</li>
-<li>调用method通过 . 访问,就像struct里面访问字段一样</li>
-</ul>
-<h5 id="指针作为receiver"><a href="#指针作为receiver" class="headerlink" title="指针作为receiver"></a>指针作为receiver</h5><p>使用场景：对内部值进行修改操作。非指针只作用于值的copy，而不是真正的值。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(b *Box)</span> <span class="title">SetColor</span><span class="params">(c Color)</span></span> &#123;</span><br><span class="line">	b.color = c</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="method继承"><a href="#method继承" class="headerlink" title="method继承"></a>method继承</h5><p>代码示例：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Human <span class="keyword">struct</span> &#123;</span><br><span class="line">	name  <span class="keyword">string</span></span><br><span class="line">	age   <span class="keyword">int</span></span><br><span class="line">	phone <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Student <span class="keyword">struct</span> &#123;</span><br><span class="line">	Human  <span class="comment">// 匿名字段</span></span><br><span class="line">	school <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Employee <span class="keyword">struct</span> &#123;</span><br><span class="line">	Human</span><br><span class="line">	company <span class="keyword">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(h *Human)</span> <span class="title">SayHi</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Printf(<span class="string">"Hi, I am %s you can call me on %s\n"</span>, h.name, h.phone)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// method继承</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	mark := Student&#123;Human&#123;<span class="string">"Mark"</span>, <span class="number">25</span>, <span class="string">"222-222-YYYY"</span>&#125;, <span class="string">"MIT"</span>&#125;</span><br><span class="line">	sam := Employee&#123;Human&#123;<span class="string">"Sam"</span>, <span class="number">45</span>, <span class="string">"111-888-XXXX"</span>&#125;, <span class="string">"Golang Inc"</span>&#125;</span><br><span class="line">	mark.SayHi()</span><br><span class="line">	sam.SayHi()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="method重写"><a href="#method重写" class="headerlink" title="method重写"></a>method重写</h5><p>上例中，如何对Employee的SayHi进行重写？</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Human定义method</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(h *Human)</span> <span class="title">SayHi</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Printf(<span class="string">"Hi, I am %s you can call me on %s\n"</span>, h.name, h.phone)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Employee的method	重写Human的method</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(e *Employee)</span> <span class="title">SayHi</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Printf(<span class="string">"Hi, I am %s, I work at %s. Call me on %s\n"</span>, e.name,</span><br><span class="line">    	e.company, e.phone) <span class="comment">//Yes you can split into 2 lines here.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">golang基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ldap</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/23/golang基础-method代码示例/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/05/23/golang基础-interface/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          golang基础-interface
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/05/23/beego初探-设计思路/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">[beego初探]设计思路</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -361,8 +226,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
